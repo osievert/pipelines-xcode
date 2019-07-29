@@ -17,9 +17,7 @@ steps:
 
 - script: |
   echo Installing $(SecureFile.secureFilePath) to the trusted CA directory...
-  #sudo chown root:root $(SecureFile.secureFilePath)
-  #sudo chmod a+r $(SecureFile.secureFilePath)
-  #sudo ln -s -t /etc/ssl/certs/ $(SecureFile.secureFilePath)
+  echo "$(SecureFile.secureFilePath)"
   sudo ls -la $(SecureFile.secureFilePath)
   ls -la $(SecureFile.secureFilePath)
 
