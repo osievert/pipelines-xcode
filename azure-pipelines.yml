@@ -15,16 +15,8 @@ steps:
     Secret1: $(secret1)
   inputs:
     targetType: 'filePath'
-    script:
-      # Write your commands here  
-      # Use the environment variables input below to pass secret variables to this script
-      echo "hello, ${Secret1} , ${secret} , $Secret , $secret , $(Secret) , $(secret) , $env:Secret , $env:secret"
-      if [[ "${Secret1}" == "42" ]]
-      then
-        echo "match!"
-      else
-        echo "no match"
-      fi
+    filePath: hello.sh
+    arguments: one two three
 # - task: Xcode@5
 #   inputs:
 #     scheme: ''
