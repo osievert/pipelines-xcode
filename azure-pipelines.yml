@@ -10,6 +10,10 @@ variables:
 - group: 'Test1'
 
 steps:
+- task: DownloadSecureFile@1
+  name: downloaded_secure_file.txt  # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+  inputs:
+    secureFile: secure_file.txt
 - task: Bash@3
   env:
     Secret1: $(secret1)
@@ -17,6 +21,7 @@ steps:
     targetType: 'filePath'
     filePath: hello.sh
     arguments: one two three
+
 # - task: Xcode@5
 #   inputs:
 #     scheme: ''

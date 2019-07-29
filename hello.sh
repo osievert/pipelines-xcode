@@ -10,4 +10,5 @@ else
   echo "no match"
 fi
 
+ls *.txt
 
