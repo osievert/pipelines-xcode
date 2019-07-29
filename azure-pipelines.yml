@@ -11,15 +11,15 @@ variables:
 
 steps:
 - task: Bash@3
-    env:
-      secret1: $(secret1)
-    inputs:
+  env:
+    secret1: $(secret1)
+  inputs:
     targetType: 'inline'
     script: '# Write your commands here
       
       # Use the environment variables input below to pass secret variables to this script
       
-      echo "hello, ADO"'
+      echo "hello, ${secret1}"'
 - task: Xcode@5
   inputs:
     scheme: ''
