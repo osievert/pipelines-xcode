@@ -13,6 +13,6 @@ fi
 #echo "secure file path: ${downloaded_secure_file.secureFilePath}"
 #ls -la ${downloaded_secure_file.secureFilePath}
 
-echo "secure file path: $0, $1 , $2"
-ls -la $0 $1 $2
+echo "secure file path: $1"
+ls -la $1
 
