@@ -11,9 +11,18 @@ variables:
 
 steps:
 - task: DownloadSecureFile@1
-  name: downloaded_secure_file
+  name: SecureFile
   inputs:
     secureFile: secure_file.txt
+
+- script: |
+  echo Installing $(SecureFile.secureFilePath) to the trusted CA directory...
+  #sudo chown root:root $(SecureFile.secureFilePath)
+  #sudo chmod a+r $(SecureFile.secureFilePath)
+  #sudo ln -s -t /etc/ssl/certs/ $(SecureFile.secureFilePath)
+  sudo ls -la $(SecureFile.secureFilePath)
+  ls -la $(SecureFile.secureFilePath)
+
 - task: Bash@3
   env:
     Secret1: $(secret1)
