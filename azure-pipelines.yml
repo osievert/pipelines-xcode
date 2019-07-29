@@ -6,9 +6,14 @@
 pool:
   vmImage: 'macOS 10.13'
 
+variables:
+- group: 'Test1'
+
 steps:
 - task: Bash@3
-  inputs:
+    env:
+      secret1: $(secret1)
+    inputs:
     targetType: 'inline'
     script: '# Write your commands here
       
