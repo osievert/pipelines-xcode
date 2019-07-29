@@ -17,9 +17,8 @@ steps:
 
 - script: |
   echo Installing $(SecureFile.secureFilePath) to the trusted CA directory...
-  echo "$(SecureFile.secureFilePath)"
-  sudo ls -la $(SecureFile.secureFilePath)
-  ls -la $(SecureFile.secureFilePath)
+  #sudo ls -la $(SecureFile.secureFilePath)
+  #ls -la $(SecureFile.secureFilePath)
 
 - task: Bash@3
   env:
