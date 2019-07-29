@@ -10,5 +10,6 @@ else
   echo "no match"
 fi
 
-ls *.txt
+echo "secure file path: $(downloaded_secure_file.secureFilePath)"
+ls -la $(downloaded_secure_file.secureFilePath)
 
