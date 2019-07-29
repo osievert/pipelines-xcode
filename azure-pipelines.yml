@@ -11,7 +11,7 @@ variables:
 
 steps:
 - task: DownloadSecureFile@1
-  name: downloaded_secure_file.txt  # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+  name: downloaded_secure_file
   inputs:
     secureFile: secure_file.txt
 - task: Bash@3
