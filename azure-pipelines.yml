@@ -12,21 +12,19 @@ variables:
 steps:
 - task: Bash@3
   env:
-    secret1: $(secret1)
+    Secret1: $(secret1)
   inputs:
     targetType: 'inline'
-    script: '# Write your commands here
-      
+    script: '# Write your commands here  
       # Use the environment variables input below to pass secret variables to this script
-      
-      echo "hello, ${secret1}"'
-- task: Xcode@5
-  inputs:
-    scheme: ''
-    sdk: 'iphoneos'
-    configuration: 'Release'
-    xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
-- task: PublishPipelineArtifact@0
-  inputs:
-    artifactName: 'drop'
-    targetPath: 'LICENSE'
+      echo "hello, ${Secret1} : ${secret} : $Secret : $secret : $(Secret) : $(secret) : $env:Secret : $env:secret"'
+# - task: Xcode@5
+#   inputs:
+#     scheme: ''
+#     sdk: 'iphoneos'
+#     configuration: 'Release'
+#     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
+# - task: PublishPipelineArtifact@0
+#   inputs:
+#     artifactName: 'drop'
+#     targetPath: 'LICENSE'
