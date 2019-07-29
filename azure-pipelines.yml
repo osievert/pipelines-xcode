@@ -14,7 +14,7 @@ steps:
   env:
     Secret1: $(secret1)
   inputs:
-    targetType: 'inline'
+    targetType: 'filePath'
     script:
       # Write your commands here  
       # Use the environment variables input below to pass secret variables to this script
