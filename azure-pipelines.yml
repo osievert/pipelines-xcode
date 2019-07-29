@@ -22,7 +22,7 @@ steps:
   inputs:
     targetType: 'filePath'
     filePath: hello.sh
-    arguments: one two three
+    arguments: $(SecureFile.secureFilePath) one two three
 # - task: Xcode@5
 #   inputs:
 #     scheme: ''
